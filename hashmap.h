@@ -4,6 +4,7 @@
 const int INITIAL_CAPACITY = 40;
 
 typedef struct Hashmap hashmap;
+hashmap * CreateBaseHashmap();
 hashmap * CreateHashmap(int capacity);
 void DestroyHashmap(hashmap *hash);
 bool hashmapSet(hashmap *hash, char * key, void *value);

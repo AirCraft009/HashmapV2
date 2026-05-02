@@ -94,20 +94,6 @@ bool hashmapSet(hashmap *hash, char * key, void *value) {
     return false;
 }
 
-// int getPos(hashmap * hash, char * key) {
-//     int idx = hashStr(key) % hash->size;
-//
-//     for (int i = 0; i < hash->size; i++) {
-//         if (strcmp(hash->list[idx].key, key) != 0) {
-//             // don't free value as it's user owned memory
-//             free(hash->list[idx].key);
-//             hash->list[idx].key = nullptr;
-//             return idx;
-//         }
-//         idx = (idx + 1) % hash->size;
-//     }
-//     return -1;
-// }
 
 /**
  * remove an item from the hashmap
@@ -151,8 +137,8 @@ int main() {
         return -1;
     }
 
-    hashmapSet(hash, "Alfred", (void *) "Allmer");
-    hashmapSet(hash, "Musa", (void *) "Conde Allmer");
+    hashmapSet(hash, "Alfred", (void *) "Around");
+    hashmapSet(hash, "Alex", (void *) "Repetitio");
     hashmapSet(hash, "Friedrich", (void *) "Merz");
     hashmapSet(hash, "Sebastian", (void *) "Schweinsteiger");
     hashmapSet(hash, "Nikola", (void *) "Stripusti");
