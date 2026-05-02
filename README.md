@@ -44,6 +44,15 @@ hashmap * CreateHashmap(int capacity)
   - size of the underlying array will be doubled.
 
 
+## Memory ownership
 
+### Keys
+
+- the str keys are duped on entry into the hashmap and are freed int DestroyHashmap()
+
+### Values
+
+- the values are user owned memory. freeing them while the hashmap is operating can lead to UB
+- They aren't freed with the hashmap
 
 
