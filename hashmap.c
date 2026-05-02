@@ -128,27 +128,3 @@ void * hashmapGet(hashmap *hash, char * key) {
     }
     return nullptr;
 }
-
-int main() {
-    hashmap *hash = CreateHashmap(100);
-    if (hash == nullptr) {
-        printf("hashmap creation failed\n");
-        DestroyHashmap(hash);
-        return -1;
-    }
-
-    hashmapSet(hash, "Alfred", (void *) "Around");
-    hashmapSet(hash, "Alex", (void *) "Repetitio");
-    hashmapSet(hash, "Friedrich", (void *) "Merz");
-    hashmapSet(hash, "Sebastian", (void *) "Schweinsteiger");
-    hashmapSet(hash, "Nikola", (void *) "Stripusti");
-
-    printf("Removed Merz: %d\n", hashmapRemove(hash, "Friedrich"));
-    printf("lastname of Musa: %s\n", (char*) hashmapGet(hash, "Musa"));
-    printf("lastname of Nikola: %s\n", (char*) hashmapGet(hash, "Nikola"));
-    printf("lastname of Friedrich(removed): %s\n", (char*) hashmapGet(hash, "Friedrich"));
-    DestroyHashmap(hash);
-    printf("Destroyed Hashmap\n");
-}
-
-
