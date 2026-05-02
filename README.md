@@ -24,7 +24,7 @@
 ```C
   // returns the void * to the value or null
   printf("lastname of Friedrich: %s\n", (char*) hashmapGet(hash, "Friedrich"));        
-  printf("Monday is the %d. day of the week.\n", (char*) hashmapGet(hash, "Monday"));
+  printf("Monday is the %d. day of the week.\n", *(int*) hashmapGet(hash, "Monday"));
 ```
 
 ### Remove values
